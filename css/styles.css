@@ -1,0 +1,146 @@
+
+:root {  
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --secondary-very-pale-blue: hsl(225, 100%, 98%);
+    --secondary-desaturated-blue: hsl(224, 23%, 55%);
+    --secondary-dark-blue: hsl(223, 47%, 23%);
+    --font-weigth-500: 500;
+    --font-weigth-700: 700;
+    --font-weigth-900: 900;
+
+    --font-family: "Red Hat Display", sans-serif;
+
+}
+
+*,*:after , *::before { 
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html , body  {
+    font-family: var(--font-family)
+}
+
+.content { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-pale-blue);
+}
+@media (min-width:375) and (min-width: 1024px) {
+    .content { 
+        background-image: url('../images/pattern-background-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 194px; 
+    }
+}
+@media (min-width:1440px) {
+    .content { 
+        background-image: url('../images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size:   100% 437px;
+       
+    }
+}
+
+.content_card { 
+    max-width: 450px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+img { 
+    border-radius: 15px  15px 0px 0px;
+}
+
+.content_card_information { 
+    padding: 0px 40px 40px 40px;
+}
+
+h1 { 
+    font-weight: var(--font-weigth-900);
+}
+.content_card_summary  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content_card_summary_description { 
+    font-size: 16px;
+}
+
+.content_card_plan { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-very-pale-blue);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.content_card_plan_select { 
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.content_card_plan_select__type  {
+    height: 24px;
+    padding: 0px;
+    margin: 0px;
+    color: var(--secondary-dark-blue);
+    font-weight: var(--font-weigth-700);
+}
+
+.content_card_plan_select_price{
+    color: var(--secondary-desaturated-blue);
+}
+
+.content_card_plan_change > a { 
+    
+    color: var(--primary-bright-blue);
+    font-weight: var(--font-weigth-500);
+}
+
+.content_card_payments { 
+    display: flex;
+    flex-direction: column;
+}
+
+.content_card_payments_proccess { 
+    padding: 10px 25px 10px 25px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-bright-blue);
+    color: #fff;
+    font-weight: var(--font-weigth-500);
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+    cursor: pointer;
+}
+
+.content_card_payments_proccess:hover{
+    background-color: var(--secondary-desaturated-blue);
+}
+.content_card_payments_cancel_order{
+
+    padding: 10px 25px 10px 25px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: var(--font-weigth-500); 
+
+}
+.content_card_payments_cancel_order:hover{
+    font-weight: var(--font-weigth-700); 
+}
